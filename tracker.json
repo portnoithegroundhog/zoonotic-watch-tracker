@@ -1,1 +1,11 @@
-[]
+[
+  {
+    "story_id": "initial-entry",
+    "story_name": "System Baseline Initialized",
+    "category": "System",
+    "status": "Active",
+    "last_updated": "2026-09-07",
+    "latest_figure": "Tracking system initialized.",
+    "primary_sources": ["https://github.com"]
+  }
+]
