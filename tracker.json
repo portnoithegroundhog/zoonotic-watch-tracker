@@ -6,6 +6,85 @@
     "status": "Active",
     "last_updated": "2026-09-07",
     "latest_figure": "Tracking system initialized.",
-    "primary_sources": ["https://github.com"]
+    "primary_sources": [
+      "https://github.com"
+    ]
+  },
+  {
+    "story_id": "ecoli-frozen-berries-2026",
+    "story_name": "E. coli O145:H28 Frozen Berry Outbreak",
+    "category": "Foodborne",
+    "status": "Ongoing",
+    "last_updated": "2026-09-07",
+    "latest_figure": "17 cases / 6 hospitalizations / expanded lot recall to Great Value Organic Triple Berry Blend across 16 states.",
+    "primary_sources": [
+      "https://www.fda.gov/food/outbreaks-foodborne-illness/outbreak-investigation-e-coli-o145h28-frozen-blueberries-july-2026"
+    ]
+  },
+  {
+    "story_id": "measles-multi-state-2026",
+    "story_name": "Multi-State Measles Cluster",
+    "category": "Reportable Disease Activity",
+    "status": "Active",
+    "last_updated": "2026-09-05",
+    "latest_figure": "42 confirmed cases across 3 jurisdictions linked to international travel exposure.",
+    "primary_sources": [
+      "https://www.cdc.gov/measles/data-research/"
+    ]
+  },
+  {
+    "story_id": "west-nile-vector-2026",
+    "story_name": "West Nile Virus Vector Surveillance",
+    "category": "Reportable Disease Activity",
+    "status": "Active",
+    "last_updated": "2026-09-04",
+    "latest_figure": "Elevated mosquito pool positive rates reported across 12 county health districts.",
+    "primary_sources": [
+      "https://emergency.cdc.gov/han/"
+    ]
+  },
+  {
+    "story_id": "listeria-deli-meats-2026",
+    "story_name": "Listeria Monocytogenes Deli Meat Recall",
+    "category": "Foodborne",
+    "status": "Closed",
+    "last_updated": "2026-08-20",
+    "latest_figure": "Outbreak investigation concluded by FDA with 34 total cases and 3 fatalities resolved.",
+    "primary_sources": [
+      "https://www.fda.gov/safety/recalls-market-withdrawals-safety-alerts"
+    ]
+  },
+  {
+    "story_id": "hpai-avian-influenza-2026",
+    "story_name": "HPAI H5N1 Domestic Poultry & Mammal Spillover",
+    "category": "Zoonotic Disease Activity",
+    "status": "Active",
+    "last_updated": "2026-09-02",
+    "latest_figure": "Continued monitoring of commercial dairy herd and backyard flock quarantines.",
+    "primary_sources": [
+      "https://www.fsis.usda.gov/recalls"
+    ]
+  },
+  {
+    "story_id": "mpox-clade-global-2026",
+    "story_name": "Global Mpox Surveillance Update",
+    "category": "Global Events of Interest",
+    "status": "Active",
+    "last_updated": "2026-08-30",
+    "latest_figure": "WHO DON tracking sporadic international cases without domestic community spread acceleration.",
+    "primary_sources": [
+      "https://www.who.int/emergencies/disease-outbreak-news"
+    ]
+  },
+  {
+    "story_id": "rabies-county-surveillance-2026",
+    "story_name": "Epizootic Rabies Wildlife Surveillance",
+    "category": "Zoonotic Disease Activity",
+    "status": "Active",
+    "last_updated": "2026-09-01",
+    "latest_figure": "8 confirmed rabid vector species (raccoons/bats) logged by state public health laboratories.",
+    "primary_sources": [
+      "https://www.ecdc.europa.eu"
+    ]
   }
 ]
