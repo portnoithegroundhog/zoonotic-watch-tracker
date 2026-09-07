@@ -1,7 +1,6 @@
 name: Update Zoonotic Watch Tracker
 
 on:
-  # Allows you to trigger the update manually via GitHub UI or API endpoint
   workflow_dispatch:
     inputs:
       tracker_json_payload:
@@ -14,30 +13,35 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Set up Python
-        uses: actions/setup-python@v5
+        uses: actions/setup-python@v6
         with:
           python-version: '3.x'
 
       - name: Append or Update tracker.json
+        env:
+          PAYLOAD: ${{ github.event.inputs.tracker_json_payload }}
         run: |
           python -c "
-          import json, sys
+          import json, os
 
-          payload = json.loads('''${{ github.event.inputs.tracker_json_payload }}''')
+          raw_payload = os.environ.get('PAYLOAD', '[]')
+          payload = json.loads(raw_payload)
           
           with open('tracker.json', 'r') as f:
               data = json.load(f)
           
-          # Check if story_id already exists to update or append
-          story_ids = [item['story_id'] for item in data]
-          if payload['story_id'] in story_ids:
-              idx = story_ids.index(payload['story_id'])
-              data[idx] = payload
-          else:
-              data.append(payload)
+          incoming_items = payload if isinstance(payload, list) else [payload]
+          
+          story_map = {item.get('story_id'): item for item in data if 'story_id' in item}
+          for new_item in incoming_items:
+              s_id = new_item.get('story_id')
+              if s_id in story_map:
+                  story_map[s_id].update(new_item)
+              else:
+                  data.append(new_item)
               
           with open('tracker.json', 'w') as f:
               json.dump(data, f, indent=2)
@@ -48,5 +52,5 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action Bot"
           git add tracker.json
-          git commit -m "Auto-update tracker.json via Gemini sync payload"
+          git commit -m "Auto-update tracker.json via API dispatch"
           git push
